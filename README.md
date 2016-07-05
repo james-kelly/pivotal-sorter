@@ -3,13 +3,15 @@
 A command line utility for sorting PivotalTracker stories.
 
 ```
-$ pip install -r requirements.txt
-$ python pivotal-sorter.py --help
-Usage: pivotal-sorter.py [OPTIONS]
+$ pip install .
+$ pip install -e . # if you want to pick up changes automatically
+$ pivotal-sorter --help
+Usage: pivotal-sorter [OPTIONS] TOKEN PROJECT_ID
+
+  Sorts the pivotal tracker histories in the backlog, you must add your api
+  TOKEN and the PROJECT ID.
 
 Options:
-  --token TEXT       PivotalTracker API Token.
-  --project-id TEXT  PivotalTracker project id.
-  --icebox           Organize icebox items.
-  --help             Show this message and exit.
+  --icebox  Organize icebox items.
+  --help    Show this message and exit.
 ```

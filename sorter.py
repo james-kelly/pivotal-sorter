@@ -15,10 +15,14 @@ def compare(a, b):
 
 
 @click.command()
-@click.option('--token', help='PivotalTracker API Token.')
-@click.option('--project-id', help='PivotalTracker project id.')
+@click.argument('token')
+@click.argument('project-id')
 @click.option('--icebox', default=False, is_flag=True, help='Organize icebox items.')
 def pivotal_sorter(token, project_id, icebox):
+    """
+    Sorts the pivotal tracker histories in the backlog, you must add your api
+    TOKEN and the PROJECT ID.
+    """
     if icebox:
         group = with_state = 'unscheduled'
     else:
