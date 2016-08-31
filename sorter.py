@@ -8,7 +8,7 @@ def compare(a, b):
     print("1: ", a['name'])
     print("2: ", b['name'])
 
-    if input("Which is higher priority? [1|2]") == "1":
+    if input("Which is higher priority, 1 or 2? ") == "1":
         return 1
     else:
         return -1
